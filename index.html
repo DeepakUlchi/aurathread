@@ -1,93 +1,216 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html>
 <head>
   <title>AuraThread</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
-      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg,#ffffff,#fdf2f8);
+      color: #333;
     }
     header {
-      padding: 20px;
-      font-size: 24px;
-      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: #ffffffcc;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
-    section {
-      padding: 60px 20px;
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
-    .btn {
-      background: black;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
+    .logo-area img {
+      height: 45px;
+    }
+    .brand-name {
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 1px;
+    }
+    nav a {
+      margin-left: 25px;
       text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
+      color: #555;
+      font-weight: 500;
     }
-    .grid {
-      display: grid;
-      gap: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      padding: 20px;
-    }
-    .card {
-      padding: 20px;
-      border-radius: 20px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    }
-    footer {
-      padding: 20px;
-      background: #111;
-      color: white;
-    }
+    nav a:hover { color: #000; }.hero {
+  text-align: center;
+  padding: 110px 20px;
+  background: linear-gradient(135deg,#fdf2f8,#eef2ff);
+}
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #111;
+}
+.hero p {
+  max-width: 650px;
+  margin: auto;
+  color: #666;
+  font-size: 18px;
+}
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 35px;
+  background: #111;
+  color: #fff;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.btn:hover { transform: scale(1.05); }
+
+section {
+  padding: 80px 40px;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #111;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+.card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.card h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.download-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #f9a8d4;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.social {
+  margin-top: 20px;
+}
+.social a {
+  text-decoration: none;
+  color: #e60023;
+  font-weight: 600;
+}
+
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+@media(max-width:768px) {
+  .hero h1 { font-size: 32px; }
+  header { flex-direction: column; gap: 10px; }
+  nav { margin-top: 10px; }
+}
+
   </style>
 </head>
-<body>
-
-<header>
-  AuraThread
-</header>
-
-<section>
-  <h1>Design Your Mood. Style Your Story.</h1>
-  <p>Creative templates, aesthetic collages & modern outfit inspiration.</p>
-  <a href="#" class="btn">Explore</a>
-</section>
-
-<section>
-  <h2>Templates</h2>
-  <div class="grid">
-    <div class="card">Instagram Templates</div>
-    <div class="card">Video Templates</div>
-    <div class="card">Pinterest Templates</div>
+<body><header>
+  <div class="logo-area">
+    <img src="logo.png" alt="AuraThread Logo">
+    <div class="brand-name">AuraThread</div>
   </div>
-</section>
-
-<section>
+  <nav>
+    <a href="#templates">Templates</a>
+    <a href="#collages">Collages</a>
+    <a href="#outfits">Outfits</a>
+  </nav>
+</header><section class="hero">
+  <h1>Design Your Mood. Style Your Story.</h1>
+  <p>AuraThread blends creative templates, aesthetic photo collages and modern outfit inspiration into one soft pastel visual experience.</p>
+  <a href="#templates" class="btn">Explore Now</a>
+  <div class="social">
+    <p>Follow us on Pinterest:</p>
+    <a href="https://pin.it/28QVHXC6E" target="_blank">Visit AuraThread on Pinterest</a>
+  </div>
+</section><section id="templates">
+  <h2>Creative Templates</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Instagram Template Pack</h3>
+      <p>Modern aesthetic layouts for creators.</p>
+      <a href="#" class="download-btn">Download</a>
+    </div>
+    <div class="card">
+      <h3>Video Reel Templates</h3>
+      <p>Stylish animated layouts for reels.</p>
+      <a href="#" class="download-btn">Download</a>
+    </div>
+    <div class="card">
+      <h3>Pinterest Pin Templates</h3>
+      <p>Soft pastel designs made to trend.</p>
+      <a href="#" class="download-btn">Download</a>
+    </div>
+  </div>
+</section><section id="collages" style="background:#fdf2f8;">
   <h2>Photo Collages</h2>
   <div class="grid">
-    <div class="card">Aesthetic Moodboards</div>
-    <div class="card">Creative Layouts</div>
-    <div class="card">Wallpaper Collages</div>
+    <div class="card">
+      <h3>Aesthetic Moodboards</h3>
+      <p>Creative collage concepts with balanced visuals.</p>
+    </div>
+    <div class="card">
+      <h3>Wallpaper Collages</h3>
+      <p>Pastel inspired digital art for screens.</p>
+    </div>
+    <div class="card">
+      <h3>Minimal Layouts</h3>
+      <p>Clean and premium soft-tone collages.</p>
+    </div>
   </div>
-</section>
-
-<section>
+</section><section id="outfits">
   <h2>Outfit Inspirations</h2>
   <div class="grid">
-    <div class="card">Minimal Looks</div>
-    <div class="card">Street Style</div>
-    <div class="card">Luxury Aesthetic</div>
+    <div class="card">
+      <h3>Street Style</h3>
+      <p>Confident and trendy combinations.</p>
+    </div>
+    <div class="card">
+      <h3>Minimal Chic</h3>
+      <p>Soft and timeless aesthetic looks.</p>
+    </div>
+    <div class="card">
+      <h3>Luxury Pastel Vibes</h3>
+      <p>Elegant fashion inspiration for creators.</p>
+    </div>
   </div>
-</section>
-
-<footer>
+</section><footer>
   © 2026 AuraThread. All rights reserved.
-</footer>
-
-</body>
+</footer></body>
 </html>
